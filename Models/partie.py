@@ -1,4 +1,4 @@
-from Models import Joueur
+from Models.joueur import Joueur
 
 
 class Partie:
