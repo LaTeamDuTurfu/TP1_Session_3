@@ -1,6 +1,7 @@
 from Models import *
 import os
 
+
 class Database:
     def __init__(self):
         self.parties = []
@@ -21,9 +22,15 @@ class Database:
                     nouvelle_partie.résultat = f.readline()
                     nouvelle_partie.ouverture = f.readline()
                     nouvelle_partie.moves = f.readline()
+                    self.parties.append(nouvelle_partie)
+
 
 
     def save_parties(self):
         pass
 
 
+db = Database()
+db.load_parties()
+for partie in db.parties:
+    print(partie)

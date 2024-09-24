@@ -1,2 +1,2 @@
-from catalogue import *
-from database import *
+from .catalogue import *
+from .database import *
