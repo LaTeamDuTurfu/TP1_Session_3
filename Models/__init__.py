@@ -1,2 +1,2 @@
-# from partie import *
-# from joueur import *
+from partie import *
+from joueur import *

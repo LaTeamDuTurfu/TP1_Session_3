@@ -44,7 +44,7 @@ class Catalogue:
 
     def modifier_partie(self):
         index_partie_modifier = self.display_selection_parties()
-        partie_modifier = self.database.parties[index_partie_delete - 1]
+        partie_modifier = self.database.parties[index_partie_modifier - 1]
         # TODO: Sélection de quelles données modifier dans la partie choisie
 
     def supprimer_partie(self):
