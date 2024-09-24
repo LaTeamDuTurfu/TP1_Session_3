@@ -21,13 +21,21 @@ class Catalogue:
 
         # Spécifitiés de la partie
         date = lire_date("Entrez la date à laquelle la date a été jouée (DD-MM-AAAA): ")
+        type = lire_caractère("Quel est le type de la partie: ")
         durée = lire_entier("Entrez la durée de la partie en minutes: ")
-        gagnant = lire_entier_intervalle(f"Est-ce {joueur1_nom} [1] qui à gagné ou {joueur2_nom} [2]: ")
+        résultat = lire_entier_intervalle(f"Est-ce {joueur1_nom} [1] qui à gagné ou {joueur2_nom} [2]: ")
         ouverture = lire_caractère("Quelle était l'ouverture utilisée: ")
         moves = input("Écrivez les moves dans un format PGN: ")
 
         # Création de la partie
-        nouvelle_partie = Partie(joueur1)
+        nouvelle_partie = Partie(joueur1, joueur2, date, type, durée, résultat, ouverture, moves)
+
+        # Ajout partie dans la base de donnée
+        self.database.parties.append(nouvelle_partie)
+
+    def display_parties(self):
+        for index_partie, partie_jouée in enumerate(self.database.parties):
+            print(f"[{index_partie + 1}] {partie_jouée}")
 
     def modifier_partie(self):
         pass
