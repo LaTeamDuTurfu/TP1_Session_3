@@ -1,7 +1,10 @@
+from Models import Joueur
+
+
 class Partie:
     def __init__(self, joueur1, joueur2, date, niveau_j1, niveau_j2, type_partie, durée, résultat, ouverture):
-        self.joueur1: str = joueur1
-        self.joueur2: str = joueur2
+        self.joueur1: Joueur = joueur1
+        self.joueur2: Joueur = joueur2
         self.date = date  # Format DD/MM/AAAA
         self.niveau_j1: int = niveau_j1
         self.niveau_j2: int = niveau_j2
