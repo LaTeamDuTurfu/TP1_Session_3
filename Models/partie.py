@@ -1,8 +1,8 @@
-from Models import Joueur
+from Models.joueur import Joueur
 
 
 class Partie:
-    def __init__(self, joueur1, joueur2, date, niveau_j1, niveau_j2, type_partie, durée, résultat, ouverture, moves):
+    def __init__(self, joueur1, joueur2, date, type_partie, durée, résultat, ouverture, moves):
         self.joueur1: Joueur = joueur1
         self.joueur2: Joueur = joueur2
         self.date = date  # Format DD/MM/AAAA
