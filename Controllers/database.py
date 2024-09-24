@@ -1,6 +1,6 @@
 class Database:
     def __init__(self):
-        pass
+        self.parties = []
 
     def load_parties(self):
         pass
