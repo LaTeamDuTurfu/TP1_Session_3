@@ -5,7 +5,7 @@ import os
 class Database:
     def __init__(self):
         self.parties = []
-        self.folder_path = 'Data'
+        self.folder_path = '../Data'
 
     def load_parties(self):
         for file in os.listdir(self.folder_path):
@@ -13,15 +13,15 @@ class Database:
                 file_path = os.path.join(self.folder_path, file)
 
                 with open(file_path, 'r') as f:
-                    nouvelle_partie = Partie()
-                    nouvelle_partie.joueur1 = f.readline()
-                    nouvelle_partie.joueur2 = f.readline()
-                    nouvelle_partie.date = f.readline()
-                    nouvelle_partie.type_partie = f.readline()
-                    nouvelle_partie.durée = f.readline()
-                    nouvelle_partie.résultat = f.readline()
-                    nouvelle_partie.ouverture = f.readline()
-                    nouvelle_partie.moves = f.readline()
+                    joueur1 = f.readline()
+                    joueur2 = f.readline()
+                    date = f.readline()
+                    type_partie = f.readline()
+                    durée = f.readline()
+                    résultat = f.readline()
+                    ouverture = f.readline()
+                    moves = f.readline()
+                    nouvelle_partie = Partie(joueur1, joueur2, date, type_partie, durée, résultat, ouverture, moves)
                     self.parties.append(nouvelle_partie)
 
 
