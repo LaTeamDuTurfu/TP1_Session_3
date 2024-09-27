@@ -17,3 +17,6 @@ class Partie:
 
     def __repr__(self):
         self.__str__()
+
+
+
