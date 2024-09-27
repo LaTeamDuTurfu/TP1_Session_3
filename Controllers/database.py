@@ -8,7 +8,7 @@ class Database:
         self.folder_path = '../Data'
 
     def load_parties(self):
-        for file in os.listdir(self.folder_path):
+        for file in os.listdir(self.folder_path): # Pour parcourir tous les fichiers du dossiers
             if file.endswith('.pgn'):
                 file_path = os.path.join(self.folder_path, file)
 
